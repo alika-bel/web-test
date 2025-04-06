@@ -1,0 +1,299 @@
+.parent {
+  background-color: blueviolet;
+  max-width: 80%;
+  margin-inline: auto;
+  margin-top: 100px;
+  border-radius: 25px;
+  padding: 20px;
+  min-height: 500px;
+  align-items: flex-start;
+  flex-direction: column;
+}
+
+.child {
+  display: flex;
+  background-color: orange;
+  padding: 15px;
+  border-radius: 5px;
+  box-shadow: 2px 5px 5px 5px rgb(37, 37, 37);
+  align-items: center;
+}
+
+.child :nth-child(2n) {
+  display: flex;
+  align-items: flex-end;
+}
+
+.child-3 {
+  display: flex;
+}
+.parent {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+}
+
+.child-3 {
+  order: 1;
+  align-self: center;
+}
+.child-5 {
+  order: 1;
+}
+
+.bg-box {
+  margin-top: 80px;
+  padding: 30px;
+  max-width: 500px;
+  min-height: 400px;
+  border: 20px dashed rgb(86, 0, 139);
+  margin-inline: auto;
+  background-color: chocolate;
+  /* Керування зображенням на фон */
+  /* background-image: url(../img/forest-5375005_1280.webp),
+    url(../img/forest-5375005_1280.webp); */
+  /* Керування повторення зображення */
+  background-repeat: no-repeat;
+  /* Переміщення фону */
+  background-position: center bottom;
+  /* або по пікселям aбо відсоткам
+  background-position: 50px 20px; 
+ background-position: 50% 50%; */
+
+  /* Розмір фону */
+  background-size: contain;
+  background-size: cover;
+  /* Статика фбо динаміка фону */
+  background-attachment: scroll;
+  background-clip: content-box;
+  background-image: linear-gradient(
+    to right top,
+    rgb(255, 243, 71) 0% 60%,
+    rgb(55, 3, 129) 60% 70%,
+    rgb(255, 226, 3) 70% 80%,
+    rgb(107, 0, 174) 80%
+  );
+  box-shadow: 15px 10px 30px 10px rebeccapurple,
+    -2px -4px 10px 10px rgb(255, 230, 0);
+}
+
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  width: 940px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 100px;
+}
+.box {
+  height: 190px;
+  width: calc(50% - 20px);
+  margin: 10px;
+  box-shadow: 0px 2px 1px rgba(0, 0, 0, 0.2), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 1px 3px rgba(0, 0, 0, 0.12);
+  border-radius: 4px;
+}
+.box:nth-child(1) {
+  background-image: url(../img/less18/bird.webp);
+  background-position: center;
+  background-color: blueviolet;
+  background-repeat: no-repeat;
+}
+.box:nth-child(2) {
+  background-image: url(../img/less18/cat.webp);
+  background-color: cadetblue;
+  background-repeat: repeat-x;
+  background-position: bottom;
+  background-size: 11%;
+}
+.box:nth-child(3) {
+  background-color: aqua;
+  background-image: url(../img/less18/dog.webp);
+  background-repeat: repeat-y;
+  background-position: left;
+}
+.box:nth-child(4) {
+  background-color: blue;
+  background-image: url(../img/less18/turtle.webp);
+}
+.ex2 {
+  padding-top: 100px;
+}
+.overlay {
+  max-width: 1600px;
+  height: 480px;
+  margin-left: auto;
+  margin-right: auto;
+  outline: 1px solid black;
+  background-image: linear-gradient(
+      to right,
+      rgba(255, 0, 0, 0.3) 7%,
+      rgba(0, 128, 0, 0.3)
+    ),
+    url(../img/less18/fish.jpeg);
+  background-position: center;
+  background-size: cover;
+}
+.ex3 {
+  display: flex;
+  justify-content: center;
+  padding-top: 150px;
+}
+.button {
+  display: inline-flex;
+  align-items: center;
+  padding: 20px 30px;
+  background-color: teal;
+  color: #fff;
+  border-radius: 3px;
+  text-decoration: none;
+  cursor: pointer;
+  border: none;
+  font-size: 14px;
+  gap: 5px;
+}
+.button::before {
+  content: "";
+  width: 20px;
+  height: 20px;
+  background-image: url(../img/less18/car.webp);
+  background-repeat: no-repeat;
+  background-color: aqua;
+  background-size: contain;
+}
+.ex4 {
+  display: flex;
+
+  margin-top: 150px;
+}
+.tasks-list {
+  display: flex;
+  flex-direction: column;
+
+  gap: 30px;
+}
+.tasks-item {
+  display: flex;
+  gap: 5px;
+}
+.tasks-item::before {
+  content: "";
+  border-radius: 50%;
+  background-color: black;
+  background-position: center;
+  background-size: contain;
+  background-image: url(../img/less18/li.svg);
+  height: 20px;
+  width: 20px;
+  background-repeat: no-repeat;
+}
+.ex5 {
+  margin-top: 150px;
+}
+.nav-list {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 50px;
+  max-width: 500px;
+  margin-inline: auto;
+}
+.nav-link {
+  font-family: "Courier New", Courier, monospace;
+  font-size: 2em;
+  color: inherit;
+  text-decoration: none;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+.nav-link::after {
+  content: "";
+  height: 5px;
+  width: 100%;
+  background-color: tomato;
+  opacity: 0;
+}
+.nav-link:hover::after {
+  opacity: 1;
+}
+
+.ex6 {
+  margin-top: 150px;
+}
+.list {
+  display: flex;
+  justify-content: center;
+  padding: 0;
+  list-style: none;
+}
+.list-item {
+  
+  max-width: 350px;
+  margin: 10px;
+  padding: 10px;
+  border-radius: 4px;
+  box-shadow: 0px 2px 1px rgba(0, 0, 0, 0.2), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 1px 3px rgba(0, 0, 0, 0.12);
+}
+.list-item::before {
+  content: "";
+  display: block;
+  height: 150px;
+  
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  background-image: url(../img/less18/car.webp);
+}
+.list-item:nth-child(2)::before {
+  background-image: url(../img/less18/dog.webp);
+}
+.list-item:nth-child(3)::before {
+  background-image: url(../img/less18/cat.webp);
+}
+.ex7 {
+  margin-top: 150px;
+}
+.img_container {
+  display: flex;
+ 
+  width: 400px;
+  position: relative;
+}
+.img_container img {
+  width: 100%;
+}
+
+.img_container::after {
+  content: "";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  background-image: linear-gradient(
+    to right bottom,
+    rgba(217, 90, 0, 0.545),
+    rgba(249, 225, 15, 0.524)
+  );
+  top: 10px;
+  left: 10px;
+}
+.second::after {
+  content: "";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  background-image: linear-gradient(
+    to right bottom,
+    rgba(26, 132, 99, 0.508),
+    rgba(105, 15, 249, 0.253)
+  );
+  top: 10px;
+  left: 10px;
+}
+.list7{
+  display: flex;
+  gap: 40px;
+  justify-content: center;
+}
